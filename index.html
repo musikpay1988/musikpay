@@ -13,7 +13,35 @@
   padding: 0;
 }
 
-body {
+<script>
+function pesquisarCifra() {
+    const musica = document.getElementById("musica").value.trim();
+
+    if (musica === "") {
+        alert("Digite o nome da música.");
+        return;
+    }
+
+    const resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = `
+        <div style="padding:20px; background:#f5f5f5; border-radius:12px;">
+            <h3>🎵 ${musica}</h3>
+            <p><strong>Cifra encontrada:</strong></p>
+            <p>Esta é uma demonstração da MUSIKPAY.</p>
+            <p>🎸 Em breve a IA irá gerar automaticamente os acordes, tom e cifra da música.</p>
+        </div>
+    `;
+}
+
+function subirTom() {
+    alert("🎵 Tom aumentado!");
+}
+
+function baixarTom() {
+    alert("🎵 Tom diminuído!");
+}
+</script>body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #111827;
